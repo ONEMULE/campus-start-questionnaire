@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily backup for @@SITE_ID@@
+
+[Timer]
+OnCalendar=*-*-* 03:20:00
+RandomizedDelaySec=300
+Persistent=true
+Unit=@@SITE_ID@@-backup.service
+
+[Install]
+WantedBy=timers.target

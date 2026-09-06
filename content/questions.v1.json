@@ -1,0 +1,3034 @@
+{
+  "DIMS": {
+    "AI": "主动启动",
+    "PE": "持续执行",
+    "TR": "时间可靠",
+    "CO": "好奇开放",
+    "LA": "学习敏捷",
+    "FA": "反馈吸收",
+    "SS": "社交启动",
+    "CW": "合作意识",
+    "OC": "组织协调",
+    "AD": "适应变化",
+    "RR": "挫折恢复",
+    "UT": "不确定容忍",
+    "RA": "责任承担",
+    "PQ": "品质意识",
+    "CE": "创意探索"
+  },
+  "GROUPS": {
+    "行动系统": [
+      "AI",
+      "PE",
+      "TR"
+    ],
+    "探索系统": [
+      "CO",
+      "LA",
+      "FA"
+    ],
+    "团队系统": [
+      "SS",
+      "CW",
+      "OC"
+    ],
+    "变化系统": [
+      "AD",
+      "RR",
+      "UT"
+    ],
+    "产出系统": [
+      "RA",
+      "PQ",
+      "CE"
+    ]
+  },
+  "INTERESTS": {
+    "academic": "学业",
+    "research": "科研",
+    "creative": "创作",
+    "org": "组织",
+    "explore": "探索"
+  },
+  "ROUTE_CODE": {
+    "academic": "A",
+    "research": "R",
+    "creative": "C",
+    "org": "O",
+    "explore": "E"
+  },
+  "MBTIS": [
+    "INTJ",
+    "INTP",
+    "ENTJ",
+    "ENTP",
+    "INFJ",
+    "INFP",
+    "ENFJ",
+    "ENFP",
+    "ISTJ",
+    "ISFJ",
+    "ESTJ",
+    "ESFJ",
+    "ISTP",
+    "ISFP",
+    "ESTP",
+    "ESFP"
+  ],
+  "QUESTIONS": {
+    "N00": {
+      "id": "N00",
+      "chapter": "序章 · 报到日",
+      "title": "角色创建",
+      "scene": "2026 年 9 月。\n行李箱的轮子第一次压过校园的地砖。手机弹出一条消息：欢迎加入海洋科学与工程学院。\n\n从今天开始，你有一整年时间。没有标准答案。",
+      "prompt": "如果只能优先探索两个方向，你现在最想看哪两个？",
+      "type": "multi",
+      "limit": 2,
+      "exact": true,
+      "interestWeights": [
+        3,
+        2
+      ],
+      "options": [
+        {
+          "id": "academic",
+          "text": "学业地图：至少先搞清楚自己四年到底要学什么。",
+          "effects": {
+            "interest": "academic"
+          },
+          "sub": ""
+        },
+        {
+          "id": "research",
+          "text": "科研地图：老师到底在实验室里每天研究什么？",
+          "effects": {
+            "interest": "research"
+          },
+          "sub": ""
+        },
+        {
+          "id": "creative",
+          "text": "创作地图：大学里总得做点高中没机会做的东西。",
+          "effects": {
+            "interest": "creative"
+          },
+          "sub": ""
+        },
+        {
+          "id": "org",
+          "text": "组织地图：学生组织、活动、班级工作，好像也挺有意思。",
+          "effects": {
+            "interest": "org"
+          },
+          "sub": ""
+        },
+        {
+          "id": "explore",
+          "text": "未知地图：我现在也不知道。先到处看看。",
+          "effects": {
+            "interest": "explore"
+          },
+          "sub": ""
+        }
+      ]
+    },
+    "N01": {
+      "id": "N01",
+      "chapter": "新生周",
+      "title": "宿舍的第一顿饭",
+      "scene": "18:37。三个室友已经开始讨论晚上吃什么，其中一个转过头问：“一起吗？”",
+      "prompt": "你会怎么做？",
+      "options": [
+        {
+          "id": "A",
+          "text": "“走啊。要不要把隔壁宿舍也喊上？”",
+          "effects": {
+            "dims": {
+              "SS": 2,
+              "CW": 1,
+              "AI": 1
+            },
+            "flags": {
+              "SOCIAL_START": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "“可以。”一起去，但更多时间是在听大家说。",
+          "effects": {
+            "dims": {
+              "SS": 1,
+              "FA": 1,
+              "CW": 1
+            },
+            "flags": {
+              "LISTENER": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "“你们去吧，我晚点自己看看附近。”",
+          "effects": {
+            "dims": {
+              "CO": 1,
+              "UT": 1,
+              "AD": 1
+            },
+            "flags": {
+              "SOLO_EXPLORE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "“你们先去，我把东西弄好，如果还早我过去找你们。”",
+          "effects": {
+            "dims": {
+              "TR": 1,
+              "AD": 1,
+              "CW": 1
+            },
+            "flags": {
+              "STRUCTURED_START": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N02": {
+      "id": "N02",
+      "chapter": "新生周",
+      "title": "你走错教学楼了",
+      "scene": "第二天 8:18；8:30 上课。你站在一个完全陌生的楼下，正确教学楼距离约 750 m。",
+      "prompt": "现在怎么处理？",
+      "options": [
+        {
+          "id": "A",
+          "text": "直接跑。",
+          "effects": {
+            "dims": {
+              "AI": 1,
+              "AD": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "问路过的同学：“不好意思，请问 XX 楼最快怎么走？”",
+          "effects": {
+            "dims": {
+              "SS": 1,
+              "AI": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "重新打开地图，研究最快路线。",
+          "effects": {
+            "dims": {
+              "LA": 1,
+              "TR": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "先问班群：“你们到了吗？老师开始点名了吗？”然后再规划。",
+          "effects": {
+            "dims": {
+              "CW": 1,
+              "TR": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N03": {
+      "id": "N03",
+      "chapter": "新生周",
+      "title": "班群第一次冷场",
+      "scene": "晚上。班群弹出：“需要一位同学帮忙整理一下明天要交的信息。”一分钟、两分钟，没有人回复。",
+      "prompt": "你会怎么做？",
+      "options": [
+        {
+          "id": "A",
+          "text": "“我来吧。”",
+          "effects": {
+            "dims": {
+              "AI": 2,
+              "RA": 1
+            },
+            "flags": {
+              "VOLUNTEER": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "“具体需要整理哪些东西？”确认工作量以后再决定。",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "RA": 1,
+              "TR": 1
+            },
+            "flags": {
+              "CLARIFY_FIRST": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "“要不三个人一起？一个收、一个核、一个汇总。”",
+          "effects": {
+            "dims": {
+              "OC": 2,
+              "CW": 1
+            },
+            "flags": {
+              "ORGANIZE_FIRST": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "再等五分钟；如果还是没人，就接。",
+          "effects": {
+            "dims": {
+              "UT": 1,
+              "AD": 1,
+              "RA": 1
+            },
+            "flags": {
+              "DELAYED_TAKEOVER": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N04": {
+      "id": "N04",
+      "chapter": "探索月",
+      "title": "五张海报",
+      "scene": "9 月下旬，学院楼里突然多出了很多海报。",
+      "prompt": "你只有时间先认真看两张。",
+      "type": "multi",
+      "limit": 2,
+      "exact": true,
+      "interestWeights": [
+        2,
+        2
+      ],
+      "options": [
+        {
+          "id": "academic",
+          "text": "专业学习交流会：“大学课程和高中到底有什么区别？”",
+          "effects": {
+            "interest": "academic"
+          },
+          "sub": ""
+        },
+        {
+          "id": "research",
+          "text": "本科生科研介绍：“欢迎对科研感兴趣的同学旁听。”",
+          "effects": {
+            "interest": "research"
+          },
+          "sub": ""
+        },
+        {
+          "id": "creative",
+          "text": "影视创作组招新：“不会没关系。”",
+          "effects": {
+            "interest": "creative"
+          },
+          "sub": ""
+        },
+        {
+          "id": "org",
+          "text": "学生组织招新。",
+          "effects": {
+            "interest": "org"
+          },
+          "sub": ""
+        },
+        {
+          "id": "explore",
+          "text": "跨学科讲座：“从海洋到大气，再到遥感。”",
+          "effects": {
+            "interest": "explore"
+          },
+          "sub": ""
+        }
+      ]
+    },
+    "N05-A": {
+      "id": "N05-A",
+      "chapter": "探索月 · 学业线",
+      "title": "俄罗斯方块课表",
+      "scene": "第一周课程表已经密得像俄罗斯方块。",
+      "prompt": "你准备怎么开始？",
+      "options": [
+        {
+          "id": "A",
+          "text": "先把所有课、DDL、实验时间塞进日历。",
+          "effects": {
+            "dims": {
+              "TR": 2,
+              "PE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "找高年级同学问：“哪几门课最容易一开始就掉队？”",
+          "effects": {
+            "dims": {
+              "LA": 1,
+              "FA": 1,
+              "SS": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "先完整体验一周，再决定怎么调整。",
+          "effects": {
+            "dims": {
+              "AD": 1,
+              "UT": 1,
+              "RR": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "马上砍掉几个非必要活动。",
+          "effects": {
+            "dims": {
+              "RA": 1,
+              "TR": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N05-R": {
+      "id": "N05-R",
+      "chapter": "探索月 · 科研线",
+      "title": "一个完全不会的任务",
+      "scene": "你联系了一位老师。老师发来一句：“你可以先看看这个。”附件是一篇论文、一份数据和一个你完全不会的软件。",
+      "prompt": "第一步做什么？",
+      "options": [
+        {
+          "id": "A",
+          "text": "先自己查两天。",
+          "effects": {
+            "dims": {
+              "LA": 2,
+              "CO": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "问师兄师姐：“如果从零开始，你建议我先学什么？”",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "LA": 1,
+              "SS": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "直接问老师：“我目前基础不够，您建议我第一步做到什么？”",
+          "effects": {
+            "dims": {
+              "FA": 2,
+              "RA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "先把任务拆成论文 / 数据 / 软件 / 最终目标。",
+          "effects": {
+            "dims": {
+              "OC": 1,
+              "LA": 1,
+              "PE": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N05-C": {
+      "id": "N05-C",
+      "chapter": "探索月 · 创作线",
+      "title": "第一次站位置",
+      "scene": "学生会新媒体部正在准备迎新短片。学姐说：“以前没做过也没关系，你最想试哪个位置？”",
+      "prompt": "你会选？",
+      "options": [
+        {
+          "id": "A",
+          "text": "“给我相机，我想去现场。”",
+          "effects": {
+            "dims": {
+              "AI": 2,
+              "AD": 2
+            },
+            "positions": {
+              "CAMERA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "“先别拍，我想先弄清楚这个视频到底想讲什么。”",
+          "effects": {
+            "dims": {
+              "CE": 2,
+              "CO": 1
+            },
+            "positions": {
+              "DIRECTOR": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "“素材给我，我想试试剪。”",
+          "effects": {
+            "dims": {
+              "PE": 2,
+              "PQ": 2
+            },
+            "positions": {
+              "EDITOR": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "“我可以帮你们把人、场地和时间排出来。”",
+          "effects": {
+            "dims": {
+              "OC": 2,
+              "TR": 2
+            },
+            "positions": {
+              "PRODUCER": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "E",
+          "text": "“我还不知道，我能不能先跟一次看看？”",
+          "effects": {
+            "dims": {
+              "LA": 1,
+              "FA": 1
+            },
+            "positions": {
+              "TRAINEE": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N05-O": {
+      "id": "N05-O",
+      "chapter": "探索月 · 组织线",
+      "title": "招新现场临时缺人",
+      "scene": "现场突然少了一个人，负责人正在找人补位。",
+      "prompt": "你会怎么接？",
+      "options": [
+        {
+          "id": "A",
+          "text": "直接去补位。",
+          "effects": {
+            "dims": {
+              "AI": 2,
+              "RA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "帮忙把现场队伍和顺序理清。",
+          "effects": {
+            "dims": {
+              "OC": 1,
+              "CW": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "去后台统计报名信息。",
+          "effects": {
+            "dims": {
+              "TR": 1,
+              "PE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "“我第一次做，先看看你们是怎么跑的。”",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "LA": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N05-E": {
+      "id": "N05-E",
+      "chapter": "探索月 · 探索线",
+      "title": "完全陌生的讲座",
+      "scene": "晚上出现一个完全陌生但有趣的讲座：“从卫星遥感看海气相互作用。”",
+      "prompt": "你会？",
+      "options": [
+        {
+          "id": "A",
+          "text": "进去再说。",
+          "effects": {
+            "dims": {
+              "CO": 2,
+              "UT": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "拉一个同学一起。",
+          "effects": {
+            "dims": {
+              "SS": 1,
+              "CO": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "听完之后把最感兴趣的三个点记下来。",
+          "effects": {
+            "dims": {
+              "PQ": 1,
+              "LA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "先在门口把简介看完，再决定。",
+          "effects": {
+            "dims": {
+              "UT": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N06": {
+      "id": "N06",
+      "chapter": "第一次组队",
+      "title": "自然站位",
+      "scene": "课程要求 5 人一组完成一个海洋文化主题项目。没有明确负责人，大家坐在桌前。",
+      "prompt": "你最自然会做什么？",
+      "options": [
+        {
+          "id": "A",
+          "text": "“要不先把事情列出来？”",
+          "effects": {
+            "dims": {
+              "AI": 1,
+              "OC": 1,
+              "RA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "“我觉得应该先决定我们到底想讲什么。”",
+          "effects": {
+            "dims": {
+              "CE": 2,
+              "CO": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "“你们定方向，我把细节做好。”",
+          "effects": {
+            "dims": {
+              "PE": 2,
+              "PQ": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "“谁什么时候有空？我来排一下。”",
+          "effects": {
+            "dims": {
+              "OC": 2,
+              "CW": 1,
+              "SS": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "E",
+          "text": "先看看哪里最缺人，再补过去。",
+          "effects": {
+            "dims": {
+              "AD": 2,
+              "CW": 1,
+              "FA": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N07": {
+      "id": "N07",
+      "chapter": "第一次组队",
+      "title": "队伍开始出问题",
+      "scene": "一个同学基本不说话，另一个人连续两次没交东西。",
+      "prompt": "你会优先怎么处理？",
+      "options": [
+        {
+          "id": "A",
+          "text": "先保证自己的部分不掉。",
+          "effects": {
+            "dims": {
+              "PE": 1,
+              "RA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "私聊掉队的人：“你是不是哪里卡住了？”",
+          "effects": {
+            "dims": {
+              "CW": 2,
+              "FA": 1
+            },
+            "flags": {
+              "SUPPORT_TEAMMATE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "“现在这样可能来不及，我们重新拆一下。”",
+          "effects": {
+            "dims": {
+              "OC": 2,
+              "AI": 1
+            },
+            "flags": {
+              "REASSIGN_TASK": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "在群里重新列一次时间节点。",
+          "effects": {
+            "dims": {
+              "TR": 1,
+              "OC": 1,
+              "SS": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "E",
+          "text": "先等等；如果最后真的没人补，自己再接。",
+          "effects": {
+            "dims": {
+              "AD": 1,
+              "PE": 1,
+              "RA": 1
+            },
+            "flags": {
+              "OVERCOMMIT": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N08": {
+      "id": "N08",
+      "chapter": "第一次组队",
+      "title": "第一次被否定",
+      "scene": "你提出一个想法，有人说：“这个感觉有点尬。”",
+      "prompt": "你怎么回应？",
+      "options": [
+        {
+          "id": "A",
+          "text": "解释为什么这么设计，然后让大家投票。",
+          "effects": {
+            "dims": {
+              "CE": 1,
+              "CW": 1,
+              "SS": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "“具体是哪里尬？”",
+          "effects": {
+            "dims": {
+              "FA": 2,
+              "PQ": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "今晚直接做两个版本。",
+          "effects": {
+            "dims": {
+              "PE": 1,
+              "CE": 1,
+              "PQ": 1
+            },
+            "flags": {
+              "DEMO_FIRST": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "“那换。”",
+          "effects": {
+            "dims": {
+              "AD": 1,
+              "CW": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N09": {
+      "id": "N09",
+      "chapter": "第一次组队",
+      "title": "署名问题",
+      "scene": "提交前你发现一个不爱说话的同学其实做了不少，但最终文档没有他的名字。",
+      "prompt": "你会怎么处理？",
+      "options": [
+        {
+          "id": "A",
+          "text": "私下提醒负责人。",
+          "effects": {
+            "dims": {
+              "CW": 2,
+              "RA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "把每个人的实际贡献写进共享文档。",
+          "effects": {
+            "dims": {
+              "OC": 1,
+              "RA": 1,
+              "PQ": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "先问本人介不介意。",
+          "effects": {
+            "dims": {
+              "CW": 1,
+              "FA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "先保证今晚按时交，明天再处理署名。",
+          "effects": {
+            "dims": {
+              "PQ": 1,
+              "TR": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N10": {
+      "id": "N10",
+      "chapter": "DDL 风暴",
+      "title": "10 点行动力",
+      "scene": "这一周同时发生：明天考试、视频当天截止、组会、朋友约饭、想听的讲座。\n\n你只剩 10 点行动力。可以超支，但未来的你会收到这张账单。",
+      "prompt": "这一周你怎么分配？",
+      "type": "allocation",
+      "options": [
+        {
+          "id": "study",
+          "text": "复习考试",
+          "effects": {
+            "dims": {
+              "TR": 1,
+              "PE": 1
+            }
+          },
+          "sub": "消耗 4"
+        },
+        {
+          "id": "video",
+          "text": "做视频",
+          "effects": {
+            "dims": {
+              "RA": 1,
+              "PE": 1,
+              "PQ": 1
+            }
+          },
+          "sub": "消耗 5"
+        },
+        {
+          "id": "meeting",
+          "text": "参加组会",
+          "effects": {
+            "dims": {
+              "CW": 1,
+              "RA": 1
+            }
+          },
+          "sub": "消耗 3"
+        },
+        {
+          "id": "friend",
+          "text": "和朋友吃饭",
+          "effects": {
+            "dims": {
+              "SS": 1,
+              "RR": 1
+            }
+          },
+          "sub": "消耗 2"
+        },
+        {
+          "id": "lecture",
+          "text": "听讲座",
+          "effects": {
+            "dims": {
+              "CO": 1,
+              "LA": 1
+            }
+          },
+          "sub": "消耗 2"
+        },
+        {
+          "id": "sleep",
+          "text": "保证正常睡眠",
+          "effects": {
+            "dims": {
+              "RR": 1
+            }
+          },
+          "sub": "消耗 3"
+        }
+      ],
+      "costs": {
+        "study": 4,
+        "video": 5,
+        "meeting": 3,
+        "friend": 2,
+        "lecture": 2,
+        "sleep": 3
+      }
+    },
+    "N11": {
+      "id": "N11",
+      "chapter": "DDL 风暴",
+      "title": "凌晨 00:20",
+      "scene": "片子第二天早上要交，你突然发现字幕还有 14 个明显错误。",
+      "prompt": "现在怎么做？",
+      "options": [
+        {
+          "id": "A",
+          "text": "全部改完。",
+          "effects": {
+            "dims": {
+              "PQ": 2,
+              "RA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "只改最明显和最影响理解的。",
+          "effects": {
+            "dims": {
+              "TR": 1,
+              "PQ": 1
+            },
+            "flags": {
+              "PRIORITIZE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "@一个还醒着的队友：“你帮我核一遍，我继续改。”",
+          "effects": {
+            "dims": {
+              "CW": 1,
+              "FA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "先判断这些错误是否真的会影响最终评价。",
+          "effects": {
+            "dims": {
+              "UT": 1
+            },
+            "flags": {
+              "COST_AWARE": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N12": {
+      "id": "N12",
+      "chapter": "DDL 风暴",
+      "title": "老师突然改需求",
+      "scene": "群消息：“补充一下，视频不要四分钟了，控制在九十秒。”距离截止 5 小时。",
+      "prompt": "你会？",
+      "options": [
+        {
+          "id": "A",
+          "text": "立刻砍掉不必要部分。",
+          "effects": {
+            "dims": {
+              "AD": 2,
+              "OC": 1
+            },
+            "flags": {
+              "SCOPE_REDUCE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "先确认老师到底最想保留什么。",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "RA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "重新做一个更集中的版本。",
+          "effects": {
+            "dims": {
+              "CE": 1,
+              "PQ": 1,
+              "PE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "先把队友情绪稳住，再重新分工。",
+          "effects": {
+            "dims": {
+              "CW": 2,
+              "OC": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N13": {
+      "id": "N13",
+      "chapter": "DDL 风暴",
+      "title": "另一个组来求救",
+      "scene": "“我们负责剪的人发烧了，你能不能帮一下？”你自己的东西也没完成。",
+      "prompt": "怎么处理？",
+      "options": [
+        {
+          "id": "A",
+          "text": "先保证自己的交付，再给他们 20 分钟帮助。",
+          "effects": {
+            "dims": {
+              "TR": 1,
+              "RA": 1,
+              "CW": 1
+            },
+            "flags": {
+              "BOUNDARY": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "先去帮他们，再重新安排自己的时间。",
+          "effects": {
+            "dims": {
+              "CW": 2,
+              "AD": 1
+            },
+            "flags": {
+              "OVERCOMMIT_IF_EXISTING": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "把自己的模板和方法发给他们。",
+          "effects": {
+            "dims": {
+              "OC": 1,
+              "FA": 1,
+              "CW": 1
+            },
+            "flags": {
+              "SHARE_RESOURCE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "“抱歉，我自己也要截止，今天真的接不了。”",
+          "effects": {
+            "dims": {
+              "TR": 1,
+              "RA": 1
+            },
+            "flags": {
+              "BOUNDARY": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N14-C": {
+      "id": "N14-C",
+      "chapter": "第一次翻车 · 创作",
+      "title": "演员迟到",
+      "scene": "距离拍摄结束只剩 40 分钟，关键演员还没到。",
+      "prompt": "你会？",
+      "options": [
+        {
+          "id": "A",
+          "text": "重排拍摄顺序。",
+          "effects": {
+            "dims": {
+              "AD": 2,
+              "OC": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "临时换人。",
+          "effects": {
+            "dims": {
+              "AI": 1,
+              "AD": 1,
+              "UT": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "确认他什么时候到，然后先拍所有不需要演员的镜头。",
+          "effects": {
+            "dims": {
+              "TR": 1,
+              "AI": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "“既然没人出现，我们能不能把等待本身变成剧情？”",
+          "effects": {
+            "dims": {
+              "CE": 2,
+              "UT": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N14-R": {
+      "id": "N14-R",
+      "chapter": "第一次翻车 · 科研",
+      "title": "参数全错",
+      "scene": "跑了两周的数据，今天发现前面所有参数都设错了。",
+      "prompt": "你会先做什么？",
+      "options": [
+        {
+          "id": "A",
+          "text": "先查日志。",
+          "effects": {
+            "dims": {
+              "LA": 2,
+              "PQ": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "找师兄帮你复现。",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "CW": 1,
+              "LA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "先做一个更小的测试版本。",
+          "effects": {
+            "dims": {
+              "AD": 1,
+              "RR": 1,
+              "PE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "把错误过程完整记录下来，再想新的假设。",
+          "effects": {
+            "dims": {
+              "RA": 1,
+              "CO": 1,
+              "RR": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N14-A": {
+      "id": "N14-A",
+      "chapter": "第一次翻车 · 学业",
+      "title": "成绩低于预期",
+      "scene": "成绩出来，比预期低很多。",
+      "prompt": "你会？",
+      "options": [
+        {
+          "id": "A",
+          "text": "做错题复盘。",
+          "effects": {
+            "dims": {
+              "LA": 1,
+              "PQ": 1,
+              "RR": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "马上重排学习计划。",
+          "effects": {
+            "dims": {
+              "TR": 1,
+              "AD": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "问老师或同学。",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "SS": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "暂时减少其他活动。",
+          "effects": {
+            "dims": {
+              "RA": 1,
+              "TR": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N14-O": {
+      "id": "N14-O",
+      "chapter": "第一次翻车 · 组织",
+      "title": "现场三连故障",
+      "scene": "一个人没来、一个设备没到、时间表晚了 20 分钟。",
+      "prompt": "你先做什么？",
+      "options": [
+        {
+          "id": "A",
+          "text": "重新分工。",
+          "effects": {
+            "dims": {
+              "OC": 2,
+              "AI": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "先守住最关键环节。",
+          "effects": {
+            "dims": {
+              "TR": 1,
+              "RA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "临时找人支援。",
+          "effects": {
+            "dims": {
+              "SS": 1,
+              "CW": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "直接按照现场情况重新走流程。",
+          "effects": {
+            "dims": {
+              "AD": 2
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N14-E": {
+      "id": "N14-E",
+      "chapter": "第一次翻车 · 探索",
+      "title": "什么都试了，却什么都没留下",
+      "scene": "你参加了两个社团、三场讲座、一个比赛和一次活动，突然发现好像没有一件真正留下来。",
+      "prompt": "你会？",
+      "options": [
+        {
+          "id": "A",
+          "text": "从里面选一件，承诺再坚持四周。",
+          "effects": {
+            "dims": {
+              "PE": 1,
+              "RA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "继续探索，但开始记录每次体验。",
+          "effects": {
+            "dims": {
+              "CO": 1,
+              "LA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "找几个人聊聊他们是怎么选择方向的。",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "SS": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "先停掉额外活动。",
+          "effects": {
+            "dims": {
+              "RR": 1,
+              "AD": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N15": {
+      "id": "N15",
+      "chapter": "第一次翻车",
+      "title": "事情真的翻车了",
+      "scene": "无论路线如何，事故最终造成了一个你不满意的结果。失败本身不会扣分。",
+      "prompt": "你第一反应是什么？",
+      "options": [
+        {
+          "id": "A",
+          "text": "先抢救还能抢救的东西。",
+          "effects": {
+            "dims": {
+              "RA": 2,
+              "AI": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "先搞清楚到底哪里错了。",
+          "effects": {
+            "dims": {
+              "LA": 1,
+              "PQ": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "先找一个人讨论。",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "CW": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "先停一下：“再乱做只会更糟。”",
+          "effects": {
+            "dims": {
+              "RR": 1,
+              "AD": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N16": {
+      "id": "N16",
+      "chapter": "第一次翻车",
+      "title": "第二天",
+      "scene": "事情已经过去一晚，你决定重新处理。",
+      "prompt": "第二天你更可能？",
+      "options": [
+        {
+          "id": "A",
+          "text": "做一个更小、但确定能完成的版本。",
+          "effects": {
+            "dims": {
+              "RR": 2,
+              "PE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "把这次的问题写下来。",
+          "effects": {
+            "dims": {
+              "LA": 1,
+              "RR": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "主动向老师 / 学长说明情况。",
+          "effects": {
+            "dims": {
+              "RA": 1,
+              "FA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "把队友重新拉回来：“昨天翻车了，我们重新来。”",
+          "effects": {
+            "dims": {
+              "CW": 1,
+              "OC": 1,
+              "RR": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N17": {
+      "id": "N17",
+      "chapter": "寒假回看",
+      "title": "你想升级什么？",
+      "scene": "第一学期结束。你回头看见：第一次主动接任务、第一次被否定、第一次翻车、第一次重新开始。",
+      "prompt": "下学期你最想刻意升级哪两件事？",
+      "type": "multi",
+      "limit": 2,
+      "exact": true,
+      "options": [
+        {
+          "id": "AI",
+          "text": "更敢主动开始。",
+          "effects": {
+            "growth": "AI"
+          },
+          "sub": ""
+        },
+        {
+          "id": "PE",
+          "text": "更会把事情做完。",
+          "effects": {
+            "growth": "PE"
+          },
+          "sub": ""
+        },
+        {
+          "id": "TR",
+          "text": "更会安排时间。",
+          "effects": {
+            "growth": "TR"
+          },
+          "sub": ""
+        },
+        {
+          "id": "CWSS",
+          "text": "更会和别人一起做事。",
+          "effects": {
+            "growth": "CW/SS"
+          },
+          "sub": ""
+        },
+        {
+          "id": "FA",
+          "text": "更会面对意见和反馈。",
+          "effects": {
+            "growth": "FA"
+          },
+          "sub": ""
+        },
+        {
+          "id": "CEPQ",
+          "text": "更想真正做出有作品感的东西。",
+          "effects": {
+            "growth": "CE/PQ"
+          },
+          "sub": ""
+        }
+      ]
+    },
+    "N18": {
+      "id": "N18",
+      "chapter": "寒假回看",
+      "title": "寒假自由日",
+      "scene": "假设突然多出半天，没有任何必须完成的任务。",
+      "prompt": "你最自然会做什么？",
+      "options": [
+        {
+          "id": "A",
+          "text": "把下学期课程整理一下。",
+          "effects": {
+            "interests": {
+              "academic": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "玩一个新工具 / 看一篇论文。",
+          "effects": {
+            "interests": {
+              "research": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "剪个视频 / 拍点照片 / 做点设计。",
+          "effects": {
+            "interests": {
+              "creative": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "约人做点什么。",
+          "effects": {
+            "interests": {
+              "org": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "E",
+          "text": "随便看看最近有什么新东西。",
+          "effects": {
+            "interests": {
+              "explore": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N19": {
+      "id": "N19",
+      "chapter": "寒假隐藏任务",
+      "title": "你获得了一个隐藏任务",
+      "scene": "不做也不会影响你的结局。完成的话，会留下一个更接近真实任务的作品样本。",
+      "prompt": "你想试哪一个？",
+      "type": "worksample"
+    },
+    "C01": {
+      "id": "C01",
+      "chapter": "春季专精 · 创作",
+      "title": "第一次独立跟拍",
+      "scene": "活动当天突然下雨，原本所有镜头设计都在室外。",
+      "prompt": "你怎么处理？",
+      "options": [
+        {
+          "id": "A",
+          "text": "等等，看雨会不会停。",
+          "effects": {
+            "dims": {
+              "PQ": 1,
+              "PE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "马上找室内替代镜头。",
+          "effects": {
+            "dims": {
+              "AD": 2,
+              "AI": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "把雨本身变成画面元素。",
+          "effects": {
+            "dims": {
+              "CE": 2,
+              "UT": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "找一个同学一起重新找场景。",
+          "effects": {
+            "dims": {
+              "SS": 1,
+              "CW": 1,
+              "AI": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "C02": {
+      "id": "C02",
+      "chapter": "春季专精 · 创作",
+      "title": "第一次提案",
+      "scene": "学姐说：“两分钟讲完你的想法。”",
+      "prompt": "你先讲什么？",
+      "options": [
+        {
+          "id": "A",
+          "text": "先讲情绪和感觉。",
+          "effects": {
+            "dims": {
+              "CE": 2
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "先讲观众最后应该获得什么信息。",
+          "effects": {
+            "dims": {
+              "PQ": 1,
+              "TR": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "直接拿出一个简单分镜。",
+          "effects": {
+            "dims": {
+              "CE": 1,
+              "PE": 1
+            },
+            "flags": {
+              "DEMO_FIRST": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "先问：“这个视频最终主要给谁看？”",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "CW": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "C03": {
+      "id": "C03",
+      "chapter": "春季专精 · 创作",
+      "title": "导出事故",
+      "scene": "截止前 40 分钟，软件导出失败。",
+      "prompt": "现在怎么做？",
+      "options": [
+        {
+          "id": "A",
+          "text": "换编码 / 换电脑 / 找原因。",
+          "effects": {
+            "dims": {
+              "LA": 1,
+              "AD": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "让队友先尝试导出，自己继续修。",
+          "effects": {
+            "dims": {
+              "RA": 1,
+              "CW": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "砍掉复杂效果，确保交付。",
+          "effects": {
+            "dims": {
+              "TR": 2,
+              "RA": 1
+            },
+            "flags": {
+              "SCOPE_REDUCE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "马上说明情况，并提出新的交付时间。",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "RA": 1
+            },
+            "flags": {
+              "ESCALATE_EARLY": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "R01": {
+      "id": "R01",
+      "chapter": "春季专精 · 科研",
+      "title": "论文看不懂",
+      "scene": "你打开一篇真正需要读的论文，术语很多，第一遍几乎看不懂。",
+      "prompt": "你会？",
+      "options": [
+        {
+          "id": "A",
+          "text": "先把所有陌生术语列出来。",
+          "effects": {
+            "dims": {
+              "CO": 1,
+              "LA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "先看图，再反推正文。",
+          "effects": {
+            "dims": {
+              "LA": 2
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "找学长问阅读顺序。",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "SS": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "先做一个最简单的复现实验。",
+          "effects": {
+            "dims": {
+              "PE": 1,
+              "LA": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "R02": {
+      "id": "R02",
+      "chapter": "春季专精 · 科研",
+      "title": "代码结果明显不对",
+      "scene": "运行结果和常识不符。",
+      "prompt": "第一步？",
+      "options": [
+        {
+          "id": "A",
+          "text": "逐步检查。",
+          "effects": {
+            "dims": {
+              "PQ": 2
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "找参考结果对比。",
+          "effects": {
+            "dims": {
+              "LA": 1,
+              "FA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "把输入缩小。",
+          "effects": {
+            "dims": {
+              "AD": 1,
+              "PQ": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "重新思考：“是不是我的假设就错了？”",
+          "effects": {
+            "dims": {
+              "CO": 1,
+              "CE": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "R03": {
+      "id": "R03",
+      "chapter": "春季专精 · 科研",
+      "title": "两周没结果",
+      "scene": "尝试了两周，还是没有清晰结果。",
+      "prompt": "你会？",
+      "options": [
+        {
+          "id": "A",
+          "text": "按原计划再坚持一段。",
+          "effects": {
+            "dims": {
+              "PE": 2,
+              "RR": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "换一种方法。",
+          "effects": {
+            "dims": {
+              "AD": 1,
+              "LA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "主动找老师做一次 checkpoint。",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "RA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "认真记录“为什么没有结果”。",
+          "effects": {
+            "dims": {
+              "RR": 1,
+              "PQ": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "A01": {
+      "id": "A01",
+      "chapter": "春季专精 · 学业",
+      "title": "考试和项目撞车",
+      "scene": "重要考试与项目交付进入同一周。",
+      "prompt": "怎么安排？",
+      "options": [
+        {
+          "id": "A",
+          "text": "按时间块复习。",
+          "effects": {
+            "dims": {
+              "TR": 2
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "找同学一起。",
+          "effects": {
+            "dims": {
+              "CW": 1,
+              "SS": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "优先解决权重最高的任务。",
+          "effects": {
+            "dims": {
+              "RA": 1,
+              "TR": 1
+            },
+            "flags": {
+              "PRIORITIZE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "短时间集中冲刺。",
+          "effects": {
+            "dims": {
+              "PE": 1,
+              "RR": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "A02": {
+      "id": "A02",
+      "chapter": "春季专精 · 学业",
+      "title": "别人找你讲题",
+      "scene": "同学来问一道你会的题。",
+      "prompt": "你会？",
+      "options": [
+        {
+          "id": "A",
+          "text": "耐心解释。",
+          "effects": {
+            "dims": {
+              "CW": 1,
+              "LA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "把自己的笔记发给他。",
+          "effects": {
+            "dims": {
+              "PQ": 1,
+              "RA": 1
+            },
+            "flags": {
+              "SHARE_RESOURCE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "自己想一个比喻重新讲。",
+          "effects": {
+            "dims": {
+              "CE": 1,
+              "LA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "“我现在没空，晚上再和你讲。”",
+          "effects": {
+            "dims": {
+              "TR": 1,
+              "CW": 1
+            },
+            "flags": {
+              "BOUNDARY": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "A03": {
+      "id": "A03",
+      "chapter": "春季专精 · 学业",
+      "title": "一门难但很有趣的选修",
+      "scene": "课程难度很高，但内容很吸引你。",
+      "prompt": "你会？",
+      "options": [
+        {
+          "id": "A",
+          "text": "直接选。",
+          "effects": {
+            "dims": {
+              "CO": 2,
+              "UT": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "优先选更稳定的课程。",
+          "effects": {
+            "dims": {
+              "TR": 1,
+              "RA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "先研究 syllabus。",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "LA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "先去旁听。",
+          "effects": {
+            "dims": {
+              "AD": 1,
+              "UT": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "O01": {
+      "id": "O01",
+      "chapter": "春季专精 · 组织",
+      "title": "第一次负责一个小模块",
+      "scene": "这次不是帮忙，而是你真的负责一小块。",
+      "prompt": "第一步？",
+      "options": [
+        {
+          "id": "A",
+          "text": "先做时间表。",
+          "effects": {
+            "dims": {
+              "OC": 2,
+              "TR": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "根据每个人擅长的东西分工。",
+          "effects": {
+            "dims": {
+              "OC": 1,
+              "CW": 1,
+              "FA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "关键部分自己做。",
+          "effects": {
+            "dims": {
+              "RA": 1,
+              "PE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "先做 Plan B。",
+          "effects": {
+            "dims": {
+              "AD": 1,
+              "OC": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "O02": {
+      "id": "O02",
+      "chapter": "春季专精 · 组织",
+      "title": "现场突然少人",
+      "scene": "开场前发现关键岗位缺人。",
+      "prompt": "你会？",
+      "options": [
+        {
+          "id": "A",
+          "text": "重新排岗位。",
+          "effects": {
+            "dims": {
+              "OC": 2
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "临时找志愿者。",
+          "effects": {
+            "dims": {
+              "SS": 1,
+              "CW": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "缩小活动范围。",
+          "effects": {
+            "dims": {
+              "TR": 1,
+              "RA": 1
+            },
+            "flags": {
+              "SCOPE_REDUCE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "自己去填最缺的位置。",
+          "effects": {
+            "dims": {
+              "AI": 1,
+              "RA": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "O03": {
+      "id": "O03",
+      "chapter": "春季专精 · 组织",
+      "title": "活动结束后意见不一样",
+      "scene": "有人说很成功，也有人觉得流程很乱。",
+      "prompt": "你怎么复盘？",
+      "options": [
+        {
+          "id": "A",
+          "text": "收集每个人的反馈。",
+          "effects": {
+            "dims": {
+              "FA": 2
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "用数据复盘。",
+          "effects": {
+            "dims": {
+              "PQ": 1,
+              "LA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "分别聊。",
+          "effects": {
+            "dims": {
+              "CW": 1,
+              "SS": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "整理 SOP。",
+          "effects": {
+            "dims": {
+              "OC": 1,
+              "PE": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "E01": {
+      "id": "E01",
+      "chapter": "春季专精 · 探索",
+      "title": "一个完全陌生的比赛",
+      "scene": "你几乎没有相关经验，但题目很有意思。",
+      "prompt": "你会？",
+      "options": [
+        {
+          "id": "A",
+          "text": "完全不会也报名。",
+          "effects": {
+            "dims": {
+              "CO": 2,
+              "UT": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "先旁观。",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "UT": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "找个人一起。",
+          "effects": {
+            "dims": {
+              "SS": 1,
+              "CW": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "给自己两周试用期。",
+          "effects": {
+            "dims": {
+              "AD": 1,
+              "PE": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "E02": {
+      "id": "E02",
+      "chapter": "春季专精 · 探索",
+      "title": "新鲜感没了",
+      "scene": "开始时很兴奋，几周以后突然没那么有趣。",
+      "prompt": "怎么办？",
+      "options": [
+        {
+          "id": "A",
+          "text": "至少坚持四周。",
+          "effects": {
+            "dims": {
+              "PE": 2,
+              "RR": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "退出，但写下原因。",
+          "effects": {
+            "dims": {
+              "LA": 1,
+              "AD": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "降低投入频率。",
+          "effects": {
+            "dims": {
+              "TR": 1,
+              "AD": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "不退出，但换个位置。",
+          "effects": {
+            "dims": {
+              "CO": 1,
+              "UT": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "E03": {
+      "id": "E03",
+      "chapter": "春季专精 · 探索",
+      "title": "两个兴趣突然能结合",
+      "scene": "你发现两个原本无关的方向似乎能做成一件事。",
+      "prompt": "你会？",
+      "options": [
+        {
+          "id": "A",
+          "text": "直接把两个方向合起来做。",
+          "effects": {
+            "dims": {
+              "CE": 2,
+              "CO": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "还是先把一个做深。",
+          "effects": {
+            "dims": {
+              "PE": 1,
+              "PQ": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "问老师 / 学长值不值得。",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "LA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "先做个小原型。",
+          "effects": {
+            "dims": {
+              "CE": 1,
+              "LA": 1,
+              "UT": 1
+            },
+            "flags": {
+              "DEMO_FIRST": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N20": {
+      "id": "N20",
+      "chapter": "第二波冲突",
+      "title": "另一个组突然求援",
+      "scene": "你手上也有任务，对方临时来求助。",
+      "prompt": "怎么回应？",
+      "options": [
+        {
+          "id": "A",
+          "text": "先把自己的东西做完，再给有限帮助。",
+          "effects": {
+            "dims": {
+              "RA": 1,
+              "TR": 1,
+              "CW": 1
+            },
+            "flags": {
+              "BOUNDARY": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "直接过去支援，同时重新协调自己组。",
+          "effects": {
+            "dims": {
+              "CW": 2,
+              "OC": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "给他们模板和方法。",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "OC": 1
+            },
+            "flags": {
+              "SHARE_RESOURCE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "礼貌拒绝。",
+          "effects": {
+            "dims": {
+              "TR": 1
+            },
+            "flags": {
+              "BOUNDARY": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N21": {
+      "id": "N21",
+      "chapter": "第二波冲突",
+      "title": "很直接的反馈",
+      "scene": "学长说：“这一版不行。节奏拖，而且开头没有意义。”",
+      "prompt": "你会？",
+      "options": [
+        {
+          "id": "A",
+          "text": "马上按照建议改。",
+          "effects": {
+            "dims": {
+              "FA": 2
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "先理解：“为什么拖？”",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "LA": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "保留核心创意，只改结构。",
+          "effects": {
+            "dims": {
+              "CE": 1,
+              "AD": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "做 A/B 两个版本。",
+          "effects": {
+            "dims": {
+              "PQ": 1,
+              "PE": 1,
+              "CE": 1
+            },
+            "flags": {
+              "DEMO_FIRST": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N22": {
+      "id": "N22",
+      "chapter": "第二波冲突",
+      "title": "你和大多数人意见相反",
+      "scene": "大家想做最稳妥的方案，你觉得太普通。",
+      "prompt": "你会？",
+      "options": [
+        {
+          "id": "A",
+          "text": "做一个小样证明自己的方案。",
+          "effects": {
+            "dims": {
+              "CE": 1,
+              "AI": 1,
+              "PE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "主体稳妥，只留一个实验性部分。",
+          "effects": {
+            "dims": {
+              "AD": 1,
+              "CE": 1,
+              "PQ": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "接受多数意见。",
+          "effects": {
+            "dims": {
+              "CW": 1,
+              "TR": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "快速找几个人试看。",
+          "effects": {
+            "dims": {
+              "FA": 1,
+              "LA": 1,
+              "PQ": 1
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N23": {
+      "id": "N23",
+      "chapter": "第二波冲突",
+      "title": "真正难的选择",
+      "scene": "你已答应周六完成一个任务，突然出现实验室邀请 / 大型跟拍 / 比赛 / 重要交流，也在周六。",
+      "prompt": "怎么处理？",
+      "options": [
+        {
+          "id": "A",
+          "text": "遵守原来的承诺。",
+          "effects": {
+            "dims": {
+              "RA": 2,
+              "TR": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "提前找到可靠的人交接。",
+          "effects": {
+            "dims": {
+              "RA": 1,
+              "OC": 1,
+              "CW": 1
+            },
+            "flags": {
+              "NEGOTIATE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "和原负责人说明情况，协商。",
+          "effects": {
+            "dims": {
+              "CO": 1,
+              "FA": 1,
+              "RA": 1
+            },
+            "flags": {
+              "NEGOTIATE": 1
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "两个都接。",
+          "effects": {
+            "flags": {
+              "OVERCOMMIT": 1
+            }
+          },
+          "sub": "你已经开始和时间谈判。时间没有答应。"
+        }
+      ],
+      "type": "single"
+    },
+    "N24": {
+      "id": "N24",
+      "chapter": "学年收束",
+      "title": "大二只能重点保留两个方向",
+      "scene": "六月，地图已经亮了很多地方。",
+      "prompt": "如果大二只能重点保留两个，你选什么？",
+      "type": "multi",
+      "limit": 2,
+      "exact": true,
+      "interestWeights": [
+        2,
+        2
+      ],
+      "options": [
+        {
+          "id": "creative",
+          "text": "继续做作品。",
+          "effects": {
+            "interest": "creative"
+          },
+          "sub": ""
+        },
+        {
+          "id": "research",
+          "text": "争取科研机会。",
+          "effects": {
+            "interest": "research"
+          },
+          "sub": ""
+        },
+        {
+          "id": "org",
+          "text": "竞选班委 / 继续学生工作。",
+          "effects": {
+            "interest": "org"
+          },
+          "sub": ""
+        },
+        {
+          "id": "academic",
+          "text": "稳住成绩。",
+          "effects": {
+            "interest": "academic"
+          },
+          "sub": ""
+        },
+        {
+          "id": "social",
+          "text": "扩大社交圈。",
+          "effects": {
+            "meta": {
+              "socialPreference": 2
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "explore",
+          "text": "自由探索新东西。",
+          "effects": {
+            "interest": "explore"
+          },
+          "sub": ""
+        }
+      ]
+    },
+    "N25": {
+      "id": "N25",
+      "chapter": "学年收束",
+      "title": "现实时间",
+      "scene": "系统不再问“想不想”，而问稳定投入。",
+      "prompt": "一件事真的值得做，你每周能稳定投入多少？",
+      "options": [
+        {
+          "id": "A",
+          "text": "0–2 小时。",
+          "effects": {
+            "meta": {
+              "availability": "0–2 小时 / 周"
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "3–5 小时。",
+          "effects": {
+            "meta": {
+              "availability": "3–5 小时 / 周"
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "6–8 小时。",
+          "effects": {
+            "meta": {
+              "availability": "6–8 小时 / 周"
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "9 小时以上。",
+          "effects": {
+            "meta": {
+              "availability": "9 小时以上 / 周"
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N26": {
+      "id": "N26",
+      "chapter": "学年收束",
+      "title": "你希望别人怎样认识你",
+      "scene": "回看这一年，系统让你选择最希望被看到的一面。",
+      "prompt": "你最希望别人怎么描述你？",
+      "options": [
+        {
+          "id": "A",
+          "text": "“靠谱。事情交给我能做完。”",
+          "effects": {
+            "meta": {
+              "selfIdentity": "RA/TR"
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "B",
+          "text": "“有点子，能把普通事情做出不同。”",
+          "effects": {
+            "meta": {
+              "selfIdentity": "CE/CO"
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "C",
+          "text": "“好合作，和我一起做事情比较顺。”",
+          "effects": {
+            "meta": {
+              "selfIdentity": "CW/SS"
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "D",
+          "text": "“学得快，给我时间我能搞懂。”",
+          "effects": {
+            "meta": {
+              "selfIdentity": "LA/RR"
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "E",
+          "text": "“不一定有固定位置，但哪里缺我能补。”",
+          "effects": {
+            "meta": {
+              "selfIdentity": "AD/CW"
+            }
+          },
+          "sub": ""
+        }
+      ],
+      "type": "single"
+    },
+    "N27": {
+      "id": "N27",
+      "chapter": "学年收束",
+      "title": "故事要不要继续",
+      "scene": "第一学年的模拟故事结束了，但真实机会可以继续。只有你主动同意后，联系方式才会进入邀请池。",
+      "prompt": "你愿意下一步接收什么？",
+      "type": "contact",
+      "options": [
+        {
+          "id": "creative",
+          "text": "我愿意体验学生会新媒体部。",
+          "effects": {
+            "meta": {
+              "consent": "CREATIVE_CONTACT"
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "research",
+          "text": "我愿意了解科研机会。",
+          "effects": {
+            "meta": {
+              "consent": "RESEARCH_CONTACT"
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "org",
+          "text": "我愿意了解学生工作。",
+          "effects": {
+            "meta": {
+              "consent": "ORG_CONTACT"
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "open",
+          "text": "我还没决定，先给我开放活动。",
+          "effects": {
+            "meta": {
+              "consent": "OPEN_ACTIVITY"
+            }
+          },
+          "sub": ""
+        },
+        {
+          "id": "none",
+          "text": "暂时不联系我。",
+          "effects": {
+            "meta": {
+              "consent": "NO_CONTACT"
+            }
+          },
+          "sub": ""
+        }
+      ]
+    },
+    "N28": {
+      "id": "N28",
+      "chapter": "学年收束 · 娱乐彩蛋",
+      "title": "MBTI 彩蛋",
+      "scene": "最后才出现娱乐层。它不会进入任何评分，也不会改变岗位推荐。",
+      "prompt": "如果你知道自己的 MBTI，可以选；不知道或不想填也可以跳过。",
+      "type": "mbti"
+    }
+  }
+}

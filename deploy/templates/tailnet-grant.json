@@ -1,0 +1,5 @@
+{
+  "src": ["@@EDGE_IP@@"],
+  "dst": ["@@NODE_IP@@"],
+  "ip": ["tcp:@@PORT@@"]
+}

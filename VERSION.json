@@ -1,0 +1,11 @@
+{
+  "product": "大一，启动！",
+  "slug": "campus-start",
+  "app_version": "1.1.0",
+  "content_version": "story-1.0.2",
+  "rule_version": "strategy-1.1.0",
+  "schema_version": 1,
+  "bundle_date": "2026-09-06T03:55:47+00:00",
+  "default_journal_mode": "DELETE",
+  "production_deployed": false
+}

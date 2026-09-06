@@ -1,0 +1,7 @@
+# 第三方组件说明
+
+本包包括自行组织的应用代码、配置、文档、虚构测试数据，以及用户此前项目的历史参考文件。未捆绑第三方字体、浏览器二进制、Python wheel或真实学生数据。
+
+运行所需第三方组件通过requirements安装，仍受各自许可约束。直接依赖包含FastAPI、Uvicorn、Pydantic、qrcode、Pillow、cryptography、python-dotenv；测试依赖包含pytest、httpx和Playwright。版本与安装包metadata中的许可字段记录在 `reports/dependencies.json`，实际依赖发布包里的LICENSE/NOTICE优先。
+
+本包不替用户决定整个项目的公开源代码许可。需要公开到GitHub或以学院名义分发时，由拥有相关权利的负责人选择许可证，核对历史素材和代码权限，并去除所有秘密配置、数据库和实名测试内容。原历史Word与旧源码不因被放进reference就变成可公开传播的个人信息资料。

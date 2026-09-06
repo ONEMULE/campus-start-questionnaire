@@ -1,0 +1,31 @@
+[Unit]
+Description=Campus Start - @@SITE_ID@@
+After=network-online.target tailscaled.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=@@RUN_USER@@
+Group=@@RUN_GROUP@@
+WorkingDirectory=@@APP_ROOT@@/current
+EnvironmentFile=@@ENV_FILE@@
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONUNBUFFERED=1
+ExecStart=@@APP_ROOT@@/current/.venv/bin/python -m uvicorn backend.main:create_app --factory --host @@NODE_IP@@ --port @@PORT@@ --workers 1 --proxy-headers --forwarded-allow-ips @@EDGE_IP@@ --no-access-log
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=@@APP_ROOT@@/data
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+MemoryMax=512M
+CPUQuota=100%
+TasksMax=128
+LimitNOFILE=8192
+
+[Install]
+WantedBy=multi-user.target

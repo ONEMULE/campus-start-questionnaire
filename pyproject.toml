@@ -1,0 +1,10 @@
+[project]
+name = "campus-start"
+version = "1.1.0"
+description = "Freshman first-year story simulator and consented registration"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"

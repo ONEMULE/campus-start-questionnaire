@@ -1,0 +1,21 @@
+[Unit]
+Description=Backup and retention for @@SITE_ID@@
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=@@RUN_USER@@
+Group=@@RUN_GROUP@@
+WorkingDirectory=@@APP_ROOT@@/current
+EnvironmentFile=@@ENV_FILE@@
+Environment=PYTHONDONTWRITEBYTECODE=1
+UMask=0077
+ExecStart=@@APP_ROOT@@/current/.venv/bin/python scripts/ops.py backup --output @@APP_ROOT@@/backups
+ExecStartPost=@@APP_ROOT@@/current/.venv/bin/python scripts/ops.py retention --apply
+ExecStartPost=@@APP_ROOT@@/current/.venv/bin/python scripts/ops.py export-deletions --output @@APP_ROOT@@/backups/deletions-latest.json
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=@@APP_ROOT@@/data @@APP_ROOT@@/backups
+MemoryMax=256M
